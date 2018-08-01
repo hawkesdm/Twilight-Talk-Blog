@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	<title>Twilight Talk - Contact Me</title>
+    
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href="web-fonts-with-css/css/fontawesome-all.min.css" rel="stylesheet">
+ <link href="css/style.css" rel="stylesheet">
+	<link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/mdb.min.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
+	<link href="css/font-awesome.css" rel="stylesheet"> 
+	<link rel="shortcut icon" type="image/png" href="img/favicon-32x32.png">
+   
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link href="jquery-ui/jquery-ui.theme.css">
+	<link href="jquery-ui/jquery-ui.structure.css">
+	<link href="jquery-ui/jquery-ui.css">
+	<script src="jquery-ui/jquery-ui.js"></script>
+	<script src="js/wow.js"></script>
+	<script> 
+		new WOW().init();
+	</script>
+    
+   
+   </head>
+   
+<body>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#"><img src="img/logo.png" width="120px" height="60px"> - <i>The Twilight Zone Blog</i></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="twilighttalk.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="posts.html">Posts</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="contact.html">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="jumbotron jumbo">
+
+</div>
+
+
+<div class="container" >
+
+<section class="sectionOne">
+
+    <!--Section heading-->
+    <h2 class="section-heading h1 pt-4">Have Any Inquiries? Please Reach out to Me!</h2>
+    <!--Section description-->
+    <p class="section-description">Tell me your thoughts, any concerns, post suggestions, lets collaborate!</p>
+
+    <div class="row">
+
+        <!--Grid column-->
+        <div class="col-md-8 col-xl-9">
+            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form">
+                            <input type="text" id="name" name="name" class="form-control">
+                            <label for="name" class="">Your name</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form">
+                            <input type="text" id="email" name="email" class="form-control">
+                            <label for="email" class="">Your email</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form">
+                            <input type="text" id="subject" name="subject" class="form-control">
+                            <label for="subject" class="">Subject</label>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-12">
+
+                        <div class="md-form">
+                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                            <label for="message">Your message</label>
+                        </div>
+
+                    </div>
+                </div>
+                <!--Grid row-->
+
+            </form>
+
+            <div class="center-on-small-only">
+				<a class="btn btn-primary" onclick="validateForm()">Send</a>            
+			</div>
+			<div class="status"></div>
+        <!--Grid column-->
+		</div>
+
+        <!--Grid column-->
+        <div class="col-md-4 col-xl-3">
+            <ul class="contact-icons">
+                <li><i class="fa fa-map-marker fa-2x"></i>
+                    <p><i>Richmond, VA, USA</i></p>
+                </li>
+
+                <li><i class="fab fa-instagram fa-2x"></i>
+                    <p><i>@Hawkes_Enterprise</i></p>
+                </li>
+
+                <li><i class="far fa-envelope fa-2x"></i>
+                    <p><i>dmhawkes91@gmail.com</i></p>
+                </li>
+            </ul>
+        </div>
+        <!--Grid column-->
+
+    </div>
+
+</section>
+<!--Section: Contact v.2-->
+
+
+<hr style="width: 100%; color: black; height: 1px; background-color:white;" />
+
+</div>
+
+<section class="sectionFour">
+
+<div class="box">
+
+<h3>AND DON'T FORGET TO SUBSRCIBE IF YOU ALREADY HAVEN'T! THANK YOU!</h3>
+
+<form method="POST" action="form.php" class="form-inline">
+<p><b>Name:</b> <input type="text" name="Name" size="20"></p>
+<p><b>Email: </b><input type="text" name="Email" size="20"></p>
+<p><button type="submit" value="Submit" class="btn btn-primary">Subscribe</button></p>
+</form>
+
+</div>
+
+
+</section>
+
+
+<footer>
+
+	<div class="row">
+		<div class="col-md-6">
+			<p><b>Twilight Talk Copyright &copy; 2018 - <a href="https://termsfeed.com/privacy-policy/cdc1f2ae439860f5e201f4d9f69d15eb">Privacy</a> and <a href="https://termsfeed.com/terms-conditions/2d9c80b7beb6440cfdd92c17b44df6fe">terms</a> of use</b></p>
+			<p class="lead"><small>Created by Douglas Hawkes</small></p>
+			<p class="lead"><small>Richmond, Virginia</small></p>
+		</div>
+		<div class="col-md-6">
+		<div class="icons">
+		<a class="fab fa-facebook" href="#" style="font-size: 50px;"></a>
+		<a class="fab fa-instagram" href="#" style="font-size: 50px;"></a>
+		<a class="far fa-envelope" href="#" style="font-size: 50px;"></a>
+		<a class="fab fa-youtube" href="#" style="font-size: 50px;"></a>
+		</div>
+		</div>
+	</div>
+	
+</footer>
+
+<script>
+function validateForm() {
+    var name =  document.getElementById('name').value;
+    if (name == "") {
+        document.getElementById('status').innerHTML = "Name cannot be empty";
+        return false;
+    }
+    var email =  document.getElementById('email').value;
+    if (email == "") {
+        document.getElementById('status').innerHTML = "Email cannot be empty";
+        return false;
+    } else {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if(!re.test(email)){
+            document.getElementById('status').innerHTML = "Email format invalid";
+            return false;
+        }
+    }
+    var subject =  document.getElementById('subject').value;
+    if (subject == "") {
+        document.getElementById('status').innerHTML = "Subject cannot be empty";
+        return false;
+    }
+    var message =  document.getElementById('message').value;
+    if (message == "") {
+        document.getElementById('status').innerHTML = "Message cannot be empty";
+        return false;
+    }
+    document.getElementById('status').innerHTML = "Sending...";
+    document.getElementById('contact-form').submit();
+
+}
+document.getElementById('status').innerHTML = "Sending...";
+formData = {
+    'name'     : $('input[name=name]').val(),
+    'email'    : $('input[name=email]').val(),
+    'subject'  : $('input[name=subject]').val(),
+    'message'  : $('textarea[name=message]').val()
+};
+
+
+$.ajax({
+url : "mail.php",
+type: "POST",
+data : formData,
+success: function(data, textStatus, jqXHR)
+{
+
+    $('#status').text(data.message);
+    if (data.code) //If mail was sent successfully, reset the form.
+    $('#contact-form').closest('form').find("input[type=text], textarea").val("");
+},
+error: function (jqXHR, textStatus, errorThrown)
+{
+    $('#status').text(jqXHR);
+}
+});
+</script>
+
+
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script> 
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+<script id="dsq-count-scr" src="//http-www-twilighttalk-com.disqus.com/count.js" async></script>
+</body>
+
+</html>
