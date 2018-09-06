@@ -8,6 +8,10 @@
     
 	<title>Twilight Talk - Twilight Zone Blog</title>
     
+	
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script> <script src="js/bootstrap.min.js"></script>
+	 <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<link href="css/twilightzone.css" rel="stylesheet">
@@ -21,7 +25,7 @@
 <body>
  
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#"><img src="img/logo.png" width="120px" height="60px"> - <i>The Twilight Zone Blog</i></a>
+  <a class="navbar-brand" href="#"><img src="img/logo.png" width="120px" height="60px">   <i>The Twilight Zone Blog</i></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -30,10 +34,13 @@
       <li class="nav-item active">
         <a class="nav-link" href="twilighttalk.html">Home <span class="sr-only">(current)</span></a>
       </li>
-	  <li class="nav-item">
+	  <li class="nav-item active">
         <a class="nav-link" href="posts.html">Posts</a>
       </li>
-      <li class="nav-item">
+	  <li class="nav-item active">
+        <a class="nav-link" href="july2018.html">Archives</a>
+      </li>
+      <li class="nav-item active">
         <a class="nav-link" href="contact.html">Contact</a>
       </li>
     </ul>
@@ -49,7 +56,7 @@
 				<div class="container">
 				  <h1 class="ml3">You've Just Entered The Twilight Zone...</h1>
 				  <p>Thank you for visiting "Twilight Talk", the top Twilight Zone blog. Here we discuss as a community all things Twilight Zone, the monsters, specific characters, Rod Serling, background music, seasons, episodes etc.</p>
-				  <p class="lead">Subscribe Now!!  <button class="btn btn-primary btn-md" method="POST" action="form.php" type="submit" value="Submit" > Here</button></p>
+				  <p class="lead">Subscribe Now!!  <button class="btn btn-primary btn-sm" method="POST" action="form.php" type="submit" value="Submit" > Here</button></p>
 				</div>
 			</div>
 		</div>
@@ -113,7 +120,7 @@
 	<h2>This Week's Top<a href="posts.html"> 'Twilight Talk'</a> Posts</h2>
 	<div class="row">
 		<div class="col-md-6">
-		 <div class="card flex-md-row mb-4 box-shadow h-md-250">
+		 <div class="card flex-xl-row mb-4 box-shadow h-md-250">
 				<div class="card-body d-flex flex-column align-items-start">
 				   <strong class="d-inline-block mb-2 text-primary">Episode</strong>
 				  <h3 class="mb-0">
@@ -132,7 +139,7 @@
 		 </div>
 		</div>
 		<div class="col-md-6">
-		 <div class="card flex-md-row mb-4 box-shadow h-md-250">
+		 <div class="card flex-xl-row mb-4 box-shadow h-md-250">
 				<div class="card-body d-flex flex-column align-items-start">
 				   <strong class="d-inline-block mb-2 text-success">TV</strong>
 				  <h3 class="mb-0">
@@ -160,7 +167,7 @@
 			<a href="revivalspost.html" class="text-blue font-weight-bold">Read more</a></p>
         </div>
 		<div class="col-md-6">
-		<img src="img/cbs.jpg" width="350px" >
+		<img src="img/cbs.jpg" class="cbs" width="350px" >
 		</div>
 		</div>
 	</div>
@@ -171,29 +178,178 @@
 	
 <section class="sectionFour">
 
-<h2 class="ml4">Twilight Talk Trivia</h2>
-<br><br><br>
-<ol>
-<li><p>What was the name of the book featured in the firsrt episode of the first season?</p></li>
-	<form id="trivia"><p><input type="text" id="guess"> </p></form>
-	<p><button id="checkGuess" type="button">Guess!</button></p>
-	<p id="answer"></p>
-	<hr style="width: 100%; color: black; height: 1px; background-color:white;" />
+<div id="wrapper">
+  <div id="main">
+    <h1>Quiz</h1>
+    <p>Test your Twilight Zone knowledge!</p>
+    <button type="button" class="begin" value="begin">begin</button>
+  </div>
 
-<li><p>In what year did the original Rod Serling series start?</p></li>
-	<form id="trivia"><p><input type="text" id="secondGuess"> </p></form>
-	<p><button id="second" type="button">Guess!</button></p>
-	<p id="secondAnswer"></p>
-	<hr style="width: 100%; color: black; height: 1px; background-color:white;" />
-	
-<li><p>In the original series, how many episodes was William Shatner in?</p></li>
-	<form id="trivia"><p><input type="text" id="thirdGuess"> </p></form>
-	<p><button id="third" type="button">Guess!</button></p>
-	<p id="thirdAnswer"></p>
-	<hr style="width: 100%; color: black; height: 1px; background-color:white;" />
-</ol>
+  <div class="transbox">
+	<div id="questions"></div>
+  </div>
+</div>
+<div id="modal">
+  <div id="message"></div>
+  <button type="button">
+    ok
+  </button>
+</div>
+<script>
+$(document).ready(function() {
+  $(".begin").click(function() {
+    $("#main").hide();
+    return quiz();
+  });
 
+  function startOver() {
+    location.reload(true);
+  }
+
+  function quiz() {
+    var score = [];
+    var questions = [{
+      q: "How many years did the original Twilight Zone series last for?",
+      s: ["1",
+        "5",
+        "3"
+      ],
+      a: "5",
+      w: "Incorrect",
+      correct: 0
+
+    }, {
+      q: "In what year did the Twilight Zone start?",
+      s: ["1970",
+        "1959",
+        "1965"
+      ],
+      a: "1959",
+      w: "Incorrect",
+      correct: 0
+
+    }, {
+      q: "How many episodes are in season 4?",
+      s: ["18",
+        "36",
+        "20",
+        "12"
+      ],
+      a: "18",
+      w: "Incorrect",
+      correct: 0
+    }];
+
+    var counter = questions.length;
+
+    function renderQuestion(questions) {
+      for (var i = 0; i < questions.length; i++) {
+        $("#questions").append(
+          '<form id="' + i + '">' +
+          '<p class="page">Question ' + (i + 1) + ' of ' + questions.length + '</p>' +
+          '<hr class="row">' +
+          '<h3 class="question">' + questions[i].q + '</h3>' +
+          radioButtons(questions[i].s, i) +
+          '<hr class="row">' +
+          '<span class="nav">' +
+          '<button type="button" class="reset" value="reset">start over</button>' +
+          '<button type="submit" class="next">next</button>' +
+          '</span></form>');
+      }
+      for (var k = questions.length - 1; k > 0; k--) {
+        $('#' + k).hide();
+      }
+      $('.reset').click(startOver);
+    }
+
+    function radioButtons(ary, qNum) {
+      var answers = [];
+      for (i = 0; i < ary.length; i++) {
+        answers.push(
+          '<div class="choices">' +
+          '<input type="radio" name="' + qNum + '" value="' + ary[i] + '" id="' + qNum + '">' +
+          '<label for="' + qNum + '">' + ary[i] + '</label>' +
+          '</div>');
+      }
+      return answers.join("");
+    }
+
+    function sumCorrect(questions) {
+      return score.reduce(function(previousValue, currentValue, index, array) {
+        return previousValue + currentValue;
+      });
+    }
+
+    function checkAnswer(answer, qNum, questions) {
+      if (answer == questions[qNum].a) {
+        questions[qNum].correct = 1;
+        score.push(questions[qNum].correct);
+
+      } else {
+        score.push(questions[qNum].correct);
+      }
+    }
+
+
+    renderQuestion(questions);
+    $("#modal").click(function() {
+      $(this).fadeOut("fast")
+    })
+    $(".next").click(function(event) {
+      event.preventDefault();
+      var answer = $(this).closest("form").find(":radio:checked").val(),
+        questionNumber = this.form.id;
+      console.warn(questionNumber, answer)
+      if (!answer) { // User did not answer question.
+        return; // Make user answer again.
+      }
+      if (answer !== questions[questionNumber].a) { // wrong answer!
+
+        $("#message").text(questions[questionNumber].w)
+        $("#modal").fadeIn("fast")
+
+      }
+      var qNum = $(this).closest("form").attr("id");
+
+      var userInput = $('input[name=' + qNum + ']:radio:checked').val();
+      if (counter > 1) {
+        checkAnswer(userInput, qNum, questions);
+        $("#" + qNum).hide();
+        $("#" + qNum).next().show();
+        counter--;
+      } else if (counter == 1) {
+        checkAnswer(userInput, qNum, questions);
+        $("#questions").find("form").remove();
+        $("#questions").append(
+          '<p class="page result"></p>' +
+          '<hr class="row">' +
+          '<div class="nav nextLast">' +
+          '<button type="button" class="reset" value="reset">start over</button>' +
+          '</div>');
+		  var hr = $('<hr />')[0];
+        $(".result").text('You answered ' + sumCorrect(questions) + ' questions correctly out of 3.');
+        for (j = 0; j < score.length; j++) {
+          if (score[j] === 0) {
+            console.log(questions[j].q, questions[j].a);
+            $("#questions").append('<div>' +
+              '<h3 class="question">' + questions[j].q + '</h3>' +
+              '<p>' + questions[j].a + '</p>' +
+              '</div>');
+          }
+          $('.reset').click(startOver);
+        }
+      } else {
+        return false;
+      }
+    });
+  }
+});
+
+</script>
 </section>
+
+	<hr style="width: 100%; color: black; height: 1px; background-color:white;" />
+
 
 <section class="sectionFive">
 
@@ -204,7 +360,7 @@
 <form method="POST" action="form.php" class="form-inline">
 <p><b>Name:</b> <input type="text" name="Name" size="20"></p>
 <p><b>Email: </b><input type="text" name="Email" size="20"></p>
-<p><button type="submit" value="Submit" class="btn btn-primary">Subscribe</button></p>
+<p><button method="POST" action="form.php" type="submit" value="Submit" class="btn btn-primary btn-sm">Subscribe</button></p>
 </form>
 
 </div>
@@ -270,6 +426,7 @@
 		
 <script>
 
+$(document).ready(function(){
 		// Wrap every letter in a span
 $('.ml3').each(function(){
   $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
@@ -313,6 +470,8 @@ anime.timeline({loop: true})
     easing: "easeOutExpo",
     delay: 1000
   });
+  
+	
 		
 		
 	$("#checkGuess").click(function() {
@@ -405,7 +564,7 @@ $('a.less', minimized_elements).click(function(event){
 
 });
 
-		
+});
 		
 		
 	</script>
@@ -415,9 +574,9 @@ $('a.less', minimized_elements).click(function(event){
 
 	<div class="row">
 		<div class="col-md-6">
-			<p><b>Twilight Talk Copyright &copy; 2018 - <a href="https://termsfeed.com/privacy-policy/cdc1f2ae439860f5e201f4d9f69d15eb">Privacy</a> and <a href="https://termsfeed.com/terms-conditions/2d9c80b7beb6440cfdd92c17b44df6fe">terms</a> of use</b></p>
-			<p class="lead"><small>Created by Douglas Hawkes</small> - dmhawkes91@gmail.com</p>
-			<p class="lead"><small>Richmond, Virginia</small></p>
+			<p><b>Twilight Talk Copyright &copy; 2018 - <a href="https://termsfeed.com/privacy-policy/cdc1f2ae439860f5e201f4d9f69d15eb">Privacy</a> and <a href="https://termsfeed.com/terms-conditions/2d9c80b7beb6440cfdd92c17b44df6fe">terms</a></b></p>
+			<p class="lead"><b>Created by Douglas Hawkes</b></small> - dmhawkes91@gmail.com</p>
+			<p class="lead"><b>Richmond, Virginia</b></small></p>
 		</div>
 		<div class="col-md-6">
 		<div class="icons">
@@ -432,13 +591,7 @@ $('a.less', minimized_elements).click(function(event){
 </footer>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="js/wow.js"></script>
-<script> 
-		new WOW().init();
-</script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-<script src="http://code.jquery.com/jquery-latest.min.js"></script> <script src="js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
