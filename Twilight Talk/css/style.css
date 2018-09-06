@@ -30,11 +30,15 @@ nav .navbar-brand{
 
 .nav-link{
 	margin-right:30px!important;
-	border-left:2px solid white;
 }
 
 .nav-item a{
-	padding-left:25px!important;
+	font-size:25px;
+}
+
+.nav-item a:hover{
+	background-color:grey;
+	border-radius:10px;
 }
 
 .jumbotron{
@@ -114,14 +118,17 @@ footer a{
 @media only screen and (max-width: 768px)  {
 
 	.navbar-brand {font-size:13px!important; font-weight:bold; }
+	nav i {display:none;}
+	nav img {width:155px;height:70px;}
 	.jumbo {height:220px;}
-	.box {  margin-left:20px!important; width:285px; box-shadow:none!important; height:260px;} 
-	.box h3{ font-size:20px;}
-	.box form{ height:20px!important; padding-top:0!important;}
-	footer {height:170px; margin-right:50px!important;margin-left:0!important;}
-	footer p{font-size:12px; margin-left:0!important;padding:5px!important; font-weight:strong!important; }
-	footer .lead {font-size:16px;}
-	.icons { margin-right:1120px!important;}
+	.box {  margin-left:33px!important; width:231px; box-shadow:none!important; height:240px;} 
+	.box h3{ font-size:18px;padding-bottom:20px;}
+	.box form{ height:15px!important;padding-left:10px!important; padding-top:0!important;font-size:10px!important;}
+	.box button {margin-left:46px!important; margin-bottom:5px!important;}
+	footer {height:170px; margin-right:100px!important;margin-left:0!important;font-weight:bold;}
+	footer p{font-size:12px; margin-left:0!important;padding:5px!important; }
+	footer .lead {font-size:13px;font-weight:bold;}
+	.icons { margin-right:1080px!important;}
 	body {overflow-x: hidden;}
 
 }

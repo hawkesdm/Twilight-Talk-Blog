@@ -33,18 +33,23 @@ nav .navbar-brand{
 
 .nav-link{
 	margin-right:30px!important;
-	border-left:2px solid white;
+
 }
 
 .nav-item a{
-	padding-left:25px!important;
+	font-size:25px;
+}
+
+.nav-item a:hover{
+	background-color:black;
+	border-radius:10px;
 }
 
 .jumbo{
 	font-family: 'Cuprum', sans-serif;
 	background-color:black!important;
 	height:550px;
-	margin-top:70px;
+	margin-top:90px;
 }
 
 .jumbo h1{
@@ -60,11 +65,7 @@ nav .navbar-brand{
 	font-size:18px;
 }
 
-.jumbo img{
-	border-radius:15%;
-	padding:5px;
-	padding-right:30px;
-}
+
 
 .container-main{
 	color:white;
@@ -124,13 +125,6 @@ nav .navbar-brand{
 	padding:10px;
 }
 
-.isDisabled {
-  color: currentColor;
-  cursor: not-allowed;
-  opacity: 0.5;
-  text-decoration: none;
-}
-
 
 .article {
 	background-image: -webkit-radial-gradient(30% 30%, circle farthest-corner, black, white);
@@ -148,7 +142,78 @@ nav .navbar-brand{
 	
 }
 
-.sectionFour{
+.sectionFour h2{
+	text-align:center;
+	font-size:75px;
+	font-style:italic;
+	
+}
+
+#wrapper{
+	border-radius:15px;
+	background:blue;
+	text-align:center;
+	padding-bottom:50px;
+	background: url(../img/trivia2.png) no-repeat;
+	background-size: cover;
+}
+
+
+
+#wrapper button{
+	position:absolute;
+	left:650px;
+}
+
+.page {
+
+  padding-top: 20px;
+  font-size: 25px!important;
+  text-align: right;
+  margin-right:160px!important;
+  
+}
+
+.reset {
+  margin: 0 60px 0;
+}
+
+.question{
+	 background: rgba(0, 0, 0, 0.5);
+	margin-top:35px;
+	padding:5px;
+	margin-left:80px;
+	width:100%;
+}
+
+.choices {
+  margin-bottom: 25px;
+  margin-right:155px;
+  text-align:right;
+  font-size:23px;
+}
+
+#wrapper .row {
+  border: 0;
+	border-top: 2px dashed #edeac8;
+	width:75%;
+	margin-left:120px;
+}
+
+
+#modal {
+  display: none;
+  position: absolute;
+  top: 2100px;
+  left:800px;
+  height: 75px;
+  width: 150px;
+  background-color: black;
+  text-align: center;
+}
+
+
+.sectionFive{
 	color:black;
 	background: url(../img/subscribe.jpg) no-repeat;
 	background-size: cover;
@@ -213,7 +278,7 @@ footer{
 	font-family: 'Unica One', cursive;
 	margin-left:100px;
 	background-color:lightgrey;
-	text-align:center;
+	text-align:left;
 	height:120px;
 	color:black;
 	padding-top:20px;
@@ -223,7 +288,6 @@ footer{
 footer a{
 
 	color:blue;
-	
 }
 
 
@@ -231,6 +295,7 @@ footer a{
 	text-align:left;
 	margin-left:50px!important;
 	margin:0;
+	padding-left:10px;
 }
 
 
@@ -249,35 +314,194 @@ footer a{
 	width:500px;
 }
 
-@media only screen and (max-width: 768px)  {
+
+
+.ml3 {
+  font-weight: 900;
+  font-size: 3.5em;
+}
+
+
+
+
+@media only screen 
+and (max-width : 380px)
+ {
 	
-	.container-main {width:315px!important;}
+	.container-main {width:260px!important; overflow-x:hidden!important;}
 	.navbar-brand {font-size:13px!important; font-weight:bold; }
+	nav i {display:none;}
+	nav img {width:155px;height:70px;}
 	body {overflow-x: hidden;}
+	.jumbo {margin-top:100px!important;}
 	.jumbo img {display:none!important;} 
 	.jumbo h1 {font-size:35px!important; }
 	.jumbo p {font-size:15px;}
+	.jumbo btn {margin-bottom:5px;}
 	.sectionOne {overflow-x: hidden;}
 	.sectionOne img {height:230px; width:230px; display: block; margin-left: auto; margin-right: auto; }
-	.sectionOne span{font-size:15px!important; text-align:center;}
+	.sectionOne span{font-size:15px!important; text-align:left;}
 	.sectionOne h2{text-align:center;}
 	.sectionOne p {text-align:center;}
 	.jumbo a {display:none!important;}
 	.sectionTwo h2 {text-align:center;}
-	.sectionTwo img {padding-left:30px;padding-bottom:5px;}
+	.cbs {padding:0!important;padding-right:50px!important; height:150px!important; width:250px!important; border-radius:0px!important;}
 	.article {background-image:none; background-color:#343a40!important;}
 	.sectionThree h1 {font-size:30px!important; text-align:center;}
 	.sectionThree p {font-size:15px; padding:5px;}
-	.sectionThree img {height:200px; width:320px; padding-right:80px; border-radius:10%;}
-	.box {  margin-left:0!important; width:285px; box-shadow:none!important; height:230px;} 
-	.box h3{ font-size:20px;}
-	.box form{ height:20px!important; padding-top:0!important;}
-	footer {height:170px; margin-right:50px!important;margin-left:0!important;}
+	.sectionThree img {height:200px; width:320px; padding-right:80px; border-radius:10%;}	
+	#wrapper button {position:absolute;left:120px!important;}
+	#wrapper .row {border-top:none!important;}
+	.choices { margin-bottom: 25px;margin-right:50px;text-align:right;font-size:17px;}
+	.question{ padding:5px;margin-left:10px;width:80%;font-size:16px!important;}
+	.page { padding-top: 20px;font-size: 20px!important;text-align: right;margin-right:40px!important;background: rgba(0, 0, 0, 0.5);}
+	.reset { margin: 0 45px 0;}
+	#modal {display: none;position: absolute;top: 3750px!important;left:50px!important;height: 70px;width: 60px;}
+	.box {  margin-left:0!important; width:231px; box-shadow:none!important; height:235px;} 
+	.box h3{ font-size:18px;padding-bottom:20px;}
+	.box form{ height:15px!important;padding-left:10px!important; padding-top:0!important;font-size:10px!important;}
+	.box button {margin-left:65px!important;}
+	footer {height:170px; margin-right:100px!important;margin-left:0!important;font-weight:bold;}
 	footer p{font-size:12px; margin-left:0!important;padding:5px!important; }
-	footer .lead {font-size:16px;}
-	.icons { margin-right:700px!important;}
+	footer .lead {font-size:12px;font-weight:bold;}
+	.icons { margin-right:900px!important;}
 
 }
-@media only screen and (max-width: 1250px) {
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 380px) {
+	.container-main {width:350px!important; overflow-x:hidden!important;}
+	.navbar-brand {font-size:13px!important; font-weight:bold; }
+	nav i {display:none;}
+	nav img {width:155px;height:70px;}
+	body {overflow-x: hidden;}
+	.jumbo {margin-top:120px!important; height:425px!important;}
+	.jumbo img {display:none!important;} 
+	.jumbo h1 {font-size:30px!important; }
+	.jumbo p {font-size:17px;}
+	.jumbo btn {margin-bottom:5px;}
+	#ep1{ width:100%;}
+	.sectionThree h1 {font-size:30px!important; padding:5px;}
+	.sectionThree p {font-size: 17px!important; padding:5px;}
+	.sectionThree img {height:200px; width:350px; padding-right:80px; border-radius:10%;}	
+	#wrapper button {position:absolute;left:190px!important;}
+	.box {box-shadow:5px 10px 18px grey!important;margin-top:10px!important;  margin-left:30px!important; width:260px; height:260px;} 
+	.box h3{ font-size:20px;padding-bottom:20px;}
+	.box form{ height:15px!important;padding-left:20px!important; padding-top:0!important;font-size:13px!important;}
+	.box button {margin-left:95px!important;}
+	footer {height:170px; margin-right:100px!important;margin-left:0!important;font-weight:bold;}
+	footer p{text-align:left;margin-left:25px!important;margin:0;padding-left:10px;}footer .lead {font-size:15px;font-weight:bold;}
+	.icons { margin-right:900px!important;}
+	#wrapper .row {border-top:none!important;}
+	.choices { margin-bottom: 25px;margin-right:50px;text-align:right;font-size:17px;}
+	.question{ padding:5px;margin-left:10px;width:80%;font-size:16px!important;}
+	.page { padding-top: 20px;font-size: 20px!important;text-align: right;margin-right:40px!important;background: rgba(0, 0, 0, 0.5);}
+	
+	}
+
+@media only screen and (min-width: 580px) {
+	.container-main {width:700px!important; overflow-x:hidden!important;}
+	.sectionThree img {height:200px; width:400px; border-radius:10%;}	
+	#wrapper button {position:absolute;left:290px!important;}
+	.box {margin-top:10px!important;  margin-left:30px!important; width:400px; border:2px solid white;	box-shadow:5px 10px 18px grey!important;  height:260px;} 
+	.box h3{ font-size:20px;padding-bottom:20px;}
+	.box form{ height:15px!important;padding-left:20px!important; padding-top:0!important;font-size:13px!important;}
+	.box button {margin-left:140px!important;margin-top:25px!important;}
+	footer {height:170px; margin-right:100px!important;margin-left:0!important;font-weight:bold;}
+		footer p{text-align:left;margin-left:50px!important;margin:0;padding-left:10px;}footer .lead {font-size:15px;font-weight:bold;}
+	.icons { margin-right:300px!important;}
+	}
+
+@media only screen and (min-width: 680px) {
+	.container-main {width:700px!important; overflow-x:hidden!important;}
+	.sectionThree img {height:200px; width:400px; border-radius:10%;}	
+	#wrapper button {position:absolute;left:340px!important;}
+	.box {margin-top:10px!important;  margin-left:55px!important; width:400px;	box-shadow:5px 10px 18px grey!important;  height:260px;} 
+	.box h3{ font-size:20px;padding-bottom:20px;}
+	.box form{ height:15px!important;padding-left:20px!important; padding-top:0!important;font-size:13px!important;}
+	.box button {margin-left:140px!important;margin-top:25px!important;}
+	}
+	
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.jumbo img {display:block!important; width:250px;height:250px;	border-radius:8px;}
+	.container-main {width:1000px!important; overflow-x:hidden!important;}
+	.sectionOne p { padding-left:100px!important;}
+	.box{background-color:black;position:absolute;margin-top:30px!important;left:45px!important;width:600px!important;height:250px!important;border: 2px solid white;padding:10px;}
+	.box h3{text-align:center;padding-top:18px;color:blue;font-size:25px!important;}
+	.box p{color:blue;font-size:16px!important;}
+	.box button{margin-left:225px!important;margin-bottom:20px!important;}
+	.box form{padding-top:0px!important;padding-left:20px;position:inline;font-size:10px!important;}
+	.icons { margin-right:300px!important;}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+.jumbo img{height:300px;width:370px!important;border-radius:15%;padding:5px;padding-right:30px;}
+#wrapper button{position:absolute;left:480px!important;}
+.question{ padding:5px;margin-left:10px;width:80%;font-size:20px!important;}
+.box{background-color:black;position:absolute;margin-top:30px!important;left:150px!important;width:600px!important;height:250px!important;border: 2px solid white;padding:10px;}
+.box h3{text-align:center;padding-top:18px;color:blue;font-size:30px!important;}
+.box p{color:blue;font-size:18px!important;}
+.box button{margin-left:225px!important;margin-bottom:20px!important;}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	.navbar{font-family: 'Cuprum', sans-serif;}
+.nav{}
+.navbar-brand{}
+.navbar-nav{}
+nav .navbar-brand{margin-left:20px;}
+.nav-link{margin-right:30px!important;}
+.nav-item a{font-size:25px;}
+.nav-item a:hover{background-color:black;border-radius:10px;}
+.jumbo{font-family: 'Cuprum', sans-serif;background-color:black!important;height:500px!important;margin-top:90px;}
+.jumbo h1{color:white!important;font-size:55px!important;padding:5px;font-family: 'Eater', cursive;}
+.jumbo p{color:white;padding:10px;font-size:18px;}
+.jumbo img{height:320px;width:400px!important;border-radius:15%;padding:5px;padding-right:30px;}
+.container-main{width:1500px!important;color:white;border-radius:10px;background:#101010;padding:20px;padding-bottom:20px;}
+.sectionOne{font-family: 'Cuprum', sans-serif;}
+.sectionOne h2{padding:10px;}
+.sectionOne span{padding:10px;font-style:italic;}
+.sectionOne p{padding:10px;line-height:2;}
+.sectionOne img{height:250px;width:250px;border-radius:30px;padding:15px;}
+.sectionTwo{font-family: 'Cuprum', sans-serif;}
+.card{background-color:#343a40!important;color:white!important;}
+#ep1{height:250px;width:250px;}
+#peele{height:250px;width:800px!important;}
+.sectionTwo p{font-size:18px;}
+.sectionTwo h2{padding:10px;}
+.article {background-image: -webkit-radial-gradient(30% 30%, circle farthest-corner, black, white);}
+.sectionThree{font-family: 'Cuprum', sans-serif;}
+.sectionThree img{height:350px;width:530px;border-radius:20px;padding:15px;}
+.sectionThree h1 {font-size:40px!important; padding:5px;}
+.sectionThree p {font-size: 20px!important; padding:5px;}
+.sectionFour h2{text-align:center;font-size:75px;font-style:italic;}
+#wrapper{border-radius:15px;background:blue;text-align:center;padding-bottom:50px;background: url(../img/trivia2.png) no-repeat;background-size: cover;}
+#wrapper button{position:absolute;left:650px!important;}
+.page {padding-top: 20px;font-size: 25px!important;text-align: right;margin-right:160px!important;}
+.reset { margin: 0 60px 0;}
+.question{ background: rgba(0, 0, 0, 0.5);margin-top:35px;padding:5px;margin-left:80px;width:100%;}
+.choices {margin-bottom: 25px;margin-right:155px;text-align:right;font-size:23px;}
+#wrapper .row {border: 0;border-top: 2px dashed #edeac8;width:75%;margin-left:120px;}
+#modal {display: none;position: absolute;top: 2100px;left:800px;height: 75px;width: 150px;background-color: black;text-align: center;}
+.sectionFive{color:black;background: url(../img/subscribe.jpg) no-repeat;background-size: cover;background-position:left center;height:300px;font-family: 'Unica One', cursive;}
+.box{background-color:black;position:absolute;margin-top:30px!important;left:300px!important;width:600px!important;height:250px!important;border: 2px solid;padding:10px;box-shadow:5px 10px 18px grey;}
+.box h3{text-align:center;padding-top:20px;color:blue;font-size:30px!important;}
+.box p{color:blue;font-size:20px!important;}
+.box form{padding-top:0px!important;padding-left:35px;position:inline;font-size:10px!important;}
+.box button{margin-left:225px!important;margin-bottom:20px!important;}
+fieldset{margin:5px;}
+fieldset legend{color:white !important}
+fieldset label{font-size:20px;color:blue;}
+#tab-1{font-size:16px;color:white;}
+footer{font-family: 'Unica One', cursive;margin-left:100px;background-color:lightgrey;text-align:left;height:120px;color:black;padding-top:20px;width:2000px;}
+footer a{color:blue;}
+ footer p{text-align:left;margin-left:50px!important;margin:0;padding-left:10px;}
+.title{color:white;font-size:20px;text-align: center;margin-top:15px;margin-bottom:20px;font-weight: bold;}	
+.nightG img{height:350px;width:500px;}
+.ml3 {font-weight: 900;font-size: 3.5em;}
 
 }
