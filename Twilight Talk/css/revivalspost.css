@@ -102,6 +102,11 @@ nav .navbar-brand{
 	padding:10px;
 }
 
+.logo{
+	width:200px!important;
+	height:80px!important;
+}
+
 
 .blog-sidebar{
 	text-align:left;
@@ -121,7 +126,9 @@ nav .navbar-brand{
 	font-size:16px;
 }
 
-
+.contact img{
+	border:solid white 1px;
+}
 
 
 .sectionFour{
@@ -198,7 +205,7 @@ footer a{
 	nav i {display:none;}
 	nav img {width:155px;height:70px;}
 	body {overflow-x: hidden;}
-	.sectionOne {overflow-x: hidden;margin-top:120px!important;}
+	.sectionOne {overflow-x: hidden;margin-top:160px!important;}
 	.sectionTwo h2 {text-align:center;}
 	#shatterday{ display:initial;}
 	#robot{ display:initial;}
@@ -216,9 +223,9 @@ footer a{
 	footer {height:170px; margin-right:100px!important;margin-left:0!important;font-weight:bold;}
 	footer p{font-size:12px; margin-left:0!important;padding:5px!important; }
 	footer .lead {font-size:13px;font-weight:bold;}
-	.icons { margin-right:900px!important;}
+	.icons { margin-left:10px!important;}
 	.contact img{width:200px; height:200px;}
-	.contact h3 {font-size:18px!important; width:150%;}
+	.contact h3 {font-size:18px!important; width:120%;}
 
 }
 
@@ -236,7 +243,7 @@ footer a{
 	.box button {margin-left:95px!important;}
 	footer {height:170px; margin-right:100px!important;margin-left:0!important;font-weight:bold;}
 		footer p{text-align:left;margin-left:25px!important;margin:0;padding-left:10px;}footer .lead {font-size:15px;font-weight:bold;}
-	.icons { margin-right:900px!important;}
+	.icons { margin-left:30px!important;}
 	.contact img{width:250px; height:275px;}
 	
 }

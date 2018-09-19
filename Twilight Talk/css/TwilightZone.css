@@ -447,7 +447,6 @@ and (max-width : 380px)
 .box button{margin-left:225px!important;margin-bottom:20px!important;}
 } 
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 	.navbar{font-family: 'Cuprum', sans-serif;}
 .nav{}
